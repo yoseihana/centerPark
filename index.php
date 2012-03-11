@@ -10,6 +10,7 @@ if (!isset($_SESSION['filtre_activer']))
 ini_set('display_errors', 1);
 
 include ('./config/config.php');
+include ('./helpers/url.php');
 
 try
 {

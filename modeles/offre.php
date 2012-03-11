@@ -14,4 +14,9 @@ class M_offre
 
         return $offres;
     }
+
+    function findOffreById($offre_id)
+    {
+
+    }
 }

@@ -11,7 +11,7 @@
         <ul>
             <?php foreach ($_SESSION['filtre_activer'] as $filtre => $value): ?>
             <ul>
-                <a href="?c=<?php echo $GLOBALS['validControllers']['offre']; ?>&a=<?php echo $GLOBALS['validActions']['supprimer_filtre']; ?>&id=<?php echo($duree['duree_id']); ?>&categorie=duree"><?php echo $filtre; ?>
+                <a href="?c=<?php echo $GLOBALS['validControllers']['offre']; ?>&a=<?php echo $GLOBALS['validActions']['supprimer_filtre']; ?>&id=<?php echo($duree['duree_id']); ?>&categorie=duree"><?php echo $filtre; ?></a>
             </ul>
             <?php endforeach; ?>
         </ul>
@@ -100,21 +100,25 @@
     <table>
         <thead>
         <tr>
-        <th>
-            Parc
-        </th>
-        <th>
-            Pays
-        </th>
-        <th>
-            Région
-        </th>
-        <th>
-            Durée
-        </th>
-        <th>
-            Prix
-        </th>
+            <th>
+                ID
+            </th>
+            <th>
+                Date début
+            </th>
+            <th>
+                Date fin
+            </th>
+            <th>
+                Prix normal
+            </th>
+            <th>
+                Prix réduit
+            </th>
+            <th>
+                Voir
+            </th>
+        </tr>
         </thead>
         <tbody>
             <?php foreach ($view['data']['offre'] as $offre): ?>
@@ -133,6 +137,9 @@
             </td>
             <td>
                 <?php echo $offre['prix_reduit']; ?>
+            </td>
+            <td>
+                <a href="<?php echo VoirOffreUrl($offre['offre_id']) ?>">Voir l'offre</a>
             </td>
         </tr>
             <?php endforeach ?>
