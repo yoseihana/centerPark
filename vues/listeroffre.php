@@ -43,6 +43,7 @@
             <?php endforeach; ?>
         </ul>
         <?php endif; ?>
+
         <?php if (count($view['data']['pays'])): ?>
         <h1>
             Pays

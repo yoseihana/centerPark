@@ -34,7 +34,7 @@ class C_offre
         $this->cottage = new C_cottage();
 
         $data['offre'] = $this->offre->getFullList(); //execute la fonction avec les éléments de la req de getFullList
-        $data['pays'] = !isset($_SESSION['filtre_activer']) ? $this->pays->lister() : NULL; //ce qu'il faudra faire + tard pr avoir toutes les infos, ne pas oublié d'inclure les ≠ modèle
+        $data['pays'] = $this->pays->lister(); //ce qu'il faudra faire + tard pr avoir toutes les infos, ne pas oublié d'inclure les ≠ modèle
         $data['duree'] = $this->duree->lister();
         $data['region'] = $this->region->lister();
         $data['parc'] = $this->parc->lister();
@@ -82,7 +82,7 @@ class C_offre
         $this->cottage = new C_cottage();
 
         $data['offre'] = $this->offre->getFullList(); //execute la fonction avec les éléments de la req de getFullList
-        $data['pays'] = !isset($_SESSION['filtre_activer']) ? $this->pays->lister() : NULL; //ce qu'il faudra faire + tard pr avoir toutes les infos, ne pas oublié d'inclure les ≠ modèle
+        $data['pays'] = !$this->pays->lister(); //ce qu'il faudra faire + tard pr avoir toutes les infos, ne pas oublié d'inclure les ≠ modèle
         $data['duree'] = $this->duree->lister();
         $data['region'] = $this->region->lister();
         $data['parc'] = $this->parc->lister();
