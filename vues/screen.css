@@ -61,46 +61,110 @@ blockquote, q {
 body {
     font-family: helvetica, sans-serif;
     font-size: 14px;
+    background-color: #F8F5EF;
+}
+
+div.header {
+    background-color: #524949;
+    color: #BCAF99;
+    height: 55px;
+    font-size: 2em;
+    padding: 1em 0 0 2em;
 }
 
 div#filtre {
     float: left;
     width: 25%;
-    background-color: #90ee90;
-    padding: 2em;
+    background-color: #B5D02F;
+    padding: 1em 0.5em 0 2em;
 }
 
 div#filtre h1 {
     color: white;
-    font-size: 1.5em;
-    margin-top: 1em;
+    font-size: 2em;
+    margin: 1em 0 0.25em;
+    font-family: georgia;
+}
+
+div#filtre h1.titreOffre:first-letter {
+    text-transform: uppercase;
 }
 
 div.offre {
-    width: 60%;
+    width: 67.5%;
     float: right;
-    padding: 2em;
+    margin-top: 3em;
+    margin-right: 1em;
+
+}
+
+div.offre h1 {
+    color: #5A4500;
+    font-size: 2em;
+    font-family: georgia;
+    margin-bottom: 1em;
 }
 
 div.offre table {
-    border-left: 1px solid green;
+    border-left: 1px solid #B5D02F;
+}
 
+div.offre a:hover, div.offre a:focus, div.offre a:active {
+    color: #B5D02F;
 }
 
 thead {
-    background-color: green;
+    background-color: #B5D02F;
     color: white;
+    font-family: georgia;
 }
 
 td {
-    border-bottom: 1px solid green;
-    border-right: 1px solid green;
+    border-bottom: 1px solid #B5D02F;
+    border-right: 1px solid #B5D02F;
     padding: 1em;
     text-align: center;
+    color: #524949;
 }
 
 th {
     padding: 1em;
     text-align: center;
     border-right: 1px solid white;
+}
+
+a, a:link, a:visited {
+    color: #524949;
+    text-decoration: none;
+}
+
+a:hover, a:focus a:active {
+    color: white;
+}
+
+/* VOIR OFFRE */
+
+div.offre h2 {
+    font-family: georgia;
+    font-size: 1.5em;
+    color: #B5D02F;
+    margin: 1em 0 0.5em;
+}
+
+div.offre p {
+    color: #524949;
+}
+
+div.retour {
+    margin-top: 1em;
+}
+
+div.retour a {
+    background-color: #B5D02F;
+    float: right;
+    padding: 0.5em;
+}
+
+div.retour a:hover, div.retour a:focus, div.retour a:active {
+    color: white;
 }

@@ -1,5 +1,5 @@
 <div id="filtre">
-    <h1>
+    <h1 class="titreOffre">
         <?php echo $c;?>
     </h1>
     <?php print_r($_SESSION); ?>
@@ -91,11 +91,26 @@
             <?php endforeach; ?>
         </ul>
         <?php endif; ?>
+        <?php if (count($view['data']['type'])): ?>
+        <h1>
+            Catégorie
+        </h1>
+        <ul>
+            <?php foreach ($view['data']['categorie'] as $categorie): ?>
+            <li>
+                <a href="?c=<?php echo $GLOBALS['validControllers']['offre']; ?>&a=<?php echo $GLOBALS['validActions']['ajouter_filtre']; ?>&id=<?php echo($categorie['categorie_id']); ?>&categorie=categorie"><?php echo $categorie['titre']; ?></a>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+        <?php endif; ?>
     </div>
 
 </div>
 
 <div class="offre">
+    <h1>
+        Liste d'offres
+    </h1>
     <?php if (count($view['data']['offre'])): ?>
     <table>
         <thead>

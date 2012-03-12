@@ -17,6 +17,9 @@ class C_offre
         include ('parc.php');
         include ('addition.php');
         include ('type.php');
+        include ('categorie.php');
+        include ('cottage.php');
+
 
         global $a, $c;
 
@@ -27,6 +30,8 @@ class C_offre
         $this->parc = new C_parc();
         $this->addition = new C_addition();
         $this->type = new C_type();
+        $this->categorie = new C_categorie();
+        $this->cottage = new C_cottage();
 
         $data['offre'] = $this->offre->getFullList(); //execute la fonction avec les éléments de la req de getFullList
         $data['pays'] = !isset($_SESSION['filtre_activer']) ? $this->pays->lister() : NULL; //ce qu'il faudra faire + tard pr avoir toutes les infos, ne pas oublié d'inclure les ≠ modèle
@@ -35,6 +40,9 @@ class C_offre
         $data['parc'] = $this->parc->lister();
         $data['addition'] = $this->addition->lister();
         $data['type'] = $this->type->lister();
+        $data['categorie'] = $this->categorie->lister();
+        $data['cottage'] = $this->cottage->lister();
+
         $html = $a . $c . '.php';
 
         return array('data' => $data, 'html' => $html);
@@ -58,6 +66,8 @@ class C_offre
         include ('parc.php');
         include ('addition.php');
         include ('type.php');
+        include ('categorie.php');
+        include ('cottage.php');
 
         global $a, $c;
 
@@ -68,6 +78,8 @@ class C_offre
         $this->parc = new C_parc();
         $this->addition = new C_addition();
         $this->type = new C_type();
+        $this->categorie = new C_categorie();
+        $this->cottage = new C_cottage();
 
         $data['offre'] = $this->offre->getFullList(); //execute la fonction avec les éléments de la req de getFullList
         $data['pays'] = !isset($_SESSION['filtre_activer']) ? $this->pays->lister() : NULL; //ce qu'il faudra faire + tard pr avoir toutes les infos, ne pas oublié d'inclure les ≠ modèle
@@ -76,6 +88,8 @@ class C_offre
         $data['parc'] = $this->parc->lister();
         $data['addition'] = $this->addition->lister();
         $data['type'] = $this->type->lister();
+        $data['categorie'] = $this->categorie->lister();
+        $data['cottage'] = $this->cottage->lister();
 
         $html = $a . $c . '.php';
 

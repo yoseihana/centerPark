@@ -13,7 +13,7 @@
           content="fr"/>
 
     <title>
-        Bibliothèque - <?php echo $view['data']['view_title']; ?>
+        Center Park - <?php echo $c; ?>
     </title>
 
     <link rel="stylesheet"
@@ -24,11 +24,7 @@
 </head>
 <body>
 <div class="header">
-    <div class="connection">
-    </div>
-    <div class="menu">
-    </div>
-
+    <h1>Bienvenu sur le site de Center Park</h1>
 </div>
 
 <div class="content">

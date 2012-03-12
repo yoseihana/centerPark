@@ -8,3 +8,11 @@ function voirOffreUrl($offre_id)
 
     return $_SERVER['PHP_SELF'] . '?' . http_build_query($params);
 }
+
+function listerOffreUrl()
+{
+    $params['a'] = $GLOBALS['validActions']['lister'];
+    $params['c'] = $GLOBALS['validControllers']['offre'];
+
+    return $_SERVER['PHP_SELF'] . '?' . http_build_query($params);
+}
