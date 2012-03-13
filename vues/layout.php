@@ -24,7 +24,7 @@
 </head>
 <body>
 <div class="header">
-    <h1>Bienvenu sur le site de Center Park</h1>
+    <h1 class="header"><a href="<?php echo listerOffreUrl(); ?>">Bienvenu sur le site de Center Park</h1>
 </div>
 
 <div class="content">

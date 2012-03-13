@@ -1,17 +1,13 @@
 <div id="filtre">
-    <h1 class="titreOffre">
-        <?php echo $c;?>
-    </h1>
-    <?php print_r($_SESSION); ?>
-    <?php if (count($_SESSION['filtre_activer'])): ?>
+    <?php if (count($_SESSION['filtreCourant'])): ?>
     <div id="selection">
         <h1>
             Filtre(s)
         </h1>
         <ul>
-            <?php foreach ($_SESSION['filtre_activer'] as $filtre => $value): ?>
+            <?php foreach ($_SESSION['filtreCourant'] as $filtre): ?>
             <ul>
-                <a href="?c=<?php echo $GLOBALS['validControllers']['offre']; ?>&a=<?php echo $GLOBALS['validActions']['supprimer_filtre']; ?>&id=<?php echo($duree['duree_id']); ?>&categorie=duree"><?php echo $filtre; ?></a>
+                <a href="?c=<?php echo $GLOBALS['validControllers']['offre']; ?>&a=<?php echo $GLOBALS['validActions']['lister']; ?>&categorie=<?php echo $filtre; ?>"><?php echo $filtre['titre']; ?></a>
             </ul>
             <?php endforeach; ?>
         </ul>
@@ -19,7 +15,7 @@
     </div>
     <?php endif; ?>
     <div id="critere">
-        <?php if (!is_null($view['data']['pays']) && count($view['data']['duree'])): ?>
+        <?php if (count($view['data']['duree']) && !isset($_SESSION['filtreCourant']['duree'])) : ?>
         <h1>
             Durée
         </h1>
@@ -31,7 +27,8 @@
             <?php endforeach; ?>
         </ul>
         <?php endif; ?>
-        <?php if (count($view['data']['region'])): ?>
+        <?php //if (count($view['data']['region'])): ?>
+        <?php if (count($view['data']['region']) && !isset($_SESSION['filtreCourant']['region'])) : ?>
         <h1>
             Région
         </h1>
@@ -44,7 +41,8 @@
         </ul>
         <?php endif; ?>
 
-        <?php if (count($view['data']['pays'])): ?>
+        <?php //if (count($view['data']['pays'])): ?>
+        <?php if (count($view['data']['pays']) && !isset($_SESSION['filtreCourant']['pays'])) : ?>
         <h1>
             Pays
         </h1>
@@ -56,7 +54,8 @@
             <?php endforeach; ?>
         </ul>
         <? endif ?>
-        <?php if (count($view['data']['parc'])): ?>
+        <?php //if (count($view['data']['parc'])): ?>
+        <?php if (count($view['data']['parc']) && !isset($_SESSION['filtreCourant']['parc'])) : ?>
         <h1>
             Parc
         </h1>
@@ -68,7 +67,8 @@
             <?php endforeach; ?>
         </ul>
         <?php endif ?>
-        <?php if (count($view['data']['addition'])): ?>
+        <?php //if (count($view['data']['addition'])): ?>
+        <?php if (count($view['data']['addition']) && !isset($_SESSION['filtreCourant']['addition'])) : ?>
         <h1>
             Addition
         </h1>
@@ -80,7 +80,8 @@
             <?php endforeach; ?>
         </ul>
         <?php endif; ?>
-        <?php if (count($view['data']['type'])): ?>
+        <?php //if (count($view['data']['type'])): ?>
+        <?php if (count($view['data']['type']) && !isset($_SESSION['filtreCourant']['type'])) : ?>
         <h1>
             Type
         </h1>
@@ -92,7 +93,8 @@
             <?php endforeach; ?>
         </ul>
         <?php endif; ?>
-        <?php if (count($view['data']['type'])): ?>
+        <?php //if (count($view['data']['categorie'])): ?>
+        <?php if (count($view['data']['categorie']) && !isset($_SESSION['filtreCourant']['categorie'])) : ?>
         <h1>
             Catégorie
         </h1>

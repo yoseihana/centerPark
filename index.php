@@ -2,9 +2,9 @@
 
 session_start();
 
-if (!isset($_SESSION['filtre_activer']))
+if (!isset($_SESSION['filtreCourant']))
 {
-    $_SESSION = array();
+    $_SESSION['filtreCourant'] = array();
 }
 
 ini_set('display_errors', 1);

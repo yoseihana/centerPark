@@ -11,7 +11,7 @@
         <ul>
             <?php foreach ($_SESSION['filtre_activer'] as $filtre => $value): ?>
             <ul>
-                <a href="?c=<?php echo $GLOBALS['validControllers']['offre']; ?>&a=<?php echo $GLOBALS['validActions']['supprimer_filtre']; ?>&id=<?php echo($duree['duree_id']); ?>&categorie=duree"><?php echo $filtre; ?></a>
+                <a href="?c=<?php echo $GLOBALS['validControllers']['offre']; ?>&a=<?php echo $GLOBALS['validActions']['supprimer_filtre']; ?>&id=<?php echo($filtre['duree_id']); ?>&categorie=duree"><?php echo $filtre; ?></a>
             </ul>
             <?php endforeach; ?>
         </ul>

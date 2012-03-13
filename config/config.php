@@ -6,8 +6,16 @@ $GLOBALS ['validControllers'] = array(
 $GLOBALS ['validActions'] = array(
     'lister' => 'lister',
     'voir' => 'voir',
-    'ajouter_filtre' => 'ajouterFiltre',
-    'supprimer_filtre' => 'supprimerFiltre'
+    'ajouter_filtre' => 'ajouter_filtre',
+    'supprimer_filtre' => 'supprimer_filtre'
+);
+
+$GLOBALS['getFiltre'] = array('pays' => 'pays',
+    'duree' => 'durees',
+    'region' => 'regions',
+    'parc' => 'parcs',
+    'type' => 'types',
+    'addition' => 'additions'
 );
 
 define('DEFAULT_CONTROLLER', $validControllers ['offre']);
